@@ -1,0 +1,2498 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>도시대기측정소 측정소별  실시간 오염도 : 서울특별시 기후대기환경정보</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<!-- GNB -->
+<script type="text/javascript" src="js/menu_model.js"></script>
+<!-- GNB -->
+<script type="text/javascript" src="js/menu_model2.js"></script>
+<!-- LNB -->
+<script type="text/javascript" src="js/subtype.js"></script>
+<!-- BK_DRAG -->
+<script type="text/javascript" src="js/bk_drag.js"></script>
+<!-- QuickMenu/FontTransfrom/Print -->
+<script type="text/javascript">
+$(document).keypress(function(rs){
+	if(rs.which == "43"){ // +
+		set_fontsize(+1);
+	}
+	if(rs.which == "45"){ // -
+		set_fontsize(-1);
+	}
+	if(rs.which == "46"){	// .
+		set_fontsize(0);
+	}
+});
+
+//<![CDATA[
+$(function(){
+	$('#gnb').menuModel1({hightLight:{level_1:1,level_2:1,level_3:0},target_obj:'#header',showOps:{visibility:'visible'},hideOps:{visibility:'hidden'}});
+	$('#lnb').menuModel2({hightLight:{level_1:1,level_2:1,level_3:0},target_obj:'',showOps:{display:'block'}, hideOps:{display:'none'}});
+})
+//]]>
+</script>
+<script type="text/javascript">
+
+if (typeof document.onselectstart!="undefined")
+	document.onselectstart=new Function ("return false")
+else{
+	document.onmousedown=function(event){
+		if("input,textarea,select".indexOf(event.target.tagName.toLoverCase())==-1)
+		return false;
+	};
+	document.onmouseup=function(){
+		return true;
+	};
+}
+document.oncontextmenu=function(){
+	return false;
+};
+</script>
+</head>
+<body>
+<!-- 스킵메뉴 안보임 -->
+<dl id="skipNav">
+  <dt>바로가기</dt>
+  <dd><a href="#gnb">메인메뉴영역 바로가기</a></dd>
+  <dd><a href="#contents">본문영역 바로가기</a></dd>
+  <dd><a href="#footer">하단영역 바로가기</a></dd>
+</dl>
+<!-- 스킵메뉴 안보임// -->
+<hr />
+<div id="wrap" class="sub01">
+
+	<!-- header -->
+	
+
+
+
+
+<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript" src="js/makePCookie.js"></script>
+<script type="text/javascript" src="js/tabcontent.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "ae953dfcd68a0c";
+wcs_do();
+
+function faqList(objs){
+	var obj = document.getElementById(objs);
+	var menuLink = getElementsByClass(obj, "A", "language"); // A태그 추출
+
+	var currentMenu = obj.currentMenu = null;	
+	for(var i=0; i<menuLink.length; i++){
+		thismenu = menuLink[i];
+		thismenu.container = obj;
+		thismenu.targetName = document.getElementById(menuLink[i].href.split("#")[1]);
+		thismenu.targetName.style.display = "none";
+		thismenu.dt = parentEle(thismenu, "dt");
+		thismenu.img = thismenu.getElementsByTagName("IMG")[0];
+		
+		thismenu.onclick = function(){
+			if(currentMenu){
+				if(this == currentMenu && currentMenu.targetName.style.display == "none"){
+					currentMenu.targetName.style.display = "";
+					addClass(currentMenu.dt, "current");
+					if(currentMenu.img) currentMenu.img.src = currentMenu.img.src.replace(".gif", "_on.gif");
+				} else {
+					currentMenu.targetName.style.display = "none";
+					removeClass(currentMenu.dt, "current");
+					if(currentMenu.img) currentMenu.img.src = currentMenu.img.src.replace("_on.gif", ".gif");
+				}
+			}
+			
+			if(currentMenu != this){
+				this.targetName.style.display = "";
+				addClass(this.dt, "current");
+				if(this.img) this.img.src = this.img.src.replace(".gif", "_on.gif");
+			}
+
+			currentMenu = this;
+			return false;
+		}
+	}
+}
+</script>
+  <div id="header">
+    <div class="container">
+      <!--<p id="logo">  <a href="http://www.seoul.go.kr/" target="_blank" title="새창으로 열립니다."><img src="img/layout/logo_seoul.gif" width="105" height="24" alt="서울특별시로고" /></a> </p>-->
+	  <h1><a href="main.htm"><img src="img/layout/logo.gif" width="254" height="34" alt="기후대기환경정보" /></a></h1>
+	  <h2 style="margin-right:1px;text-align:right;width:100%;"><iframe src="//www.seoul.go.kr/seoul-common-gnb/seoul-common-gnb-type-a.html?gid=cleanair" 
+	  	style="margin-top:5px;" width="40%" height="40" frameborder="0" scrolling="no" title="서울시 새소식"></iframe>
+	  </h2>
+      <h2 class="hidden">메인메뉴</h2>
+      <!-- 탑네비게이션 -->
+      <ul id="gnb">
+        <li id="mNavi01"><a id="mNavilink1" href="air_city.htm?method=measure">기후대기환경정보</a> 
+          <ul>
+            <li class="sNavi01"><a href="air_city.htm?method=measure">대기환경</a></li>
+            <!-- <li class="sNavi02"><a href="aws.htm?method=observatory">기상관측</a></li> -->
+            <!-- <li class="sNavi03"><a href="air_thermo.htm?method=thermo">도심열화상</a></li> -->
+            <li class="sNavi04"><a href="livecam.htm?method=rt">라이브 캠</a></li>
+          </ul>
+        </li> 
+        <li id="mNavi02"><a id="mNavilink2" href="forecast_alert.htm?method=dust">예보&middot;경보</a>
+          <ul>
+            <li class="sNavi01"><a href="forecast_alert.htm?method=dust">미세먼지</a></li>
+            <li class="sNavi02"><a href="forecast_alert.htm?method=dust2">초미세먼지</a></li>
+            <li class="sNavi03"><a href="forecast_alert.htm?method=ozone">오존</a></li>
+            <li class="sNavi04"><a href="forecast_alert.htm?method=ysand">황사</a></li>
+            <li class="sNavi05"><a href="forecast_alert.htm?method=weather">날씨</a></li>
+            <li class="sNavi06"><a href="inform.htm?method=weatherFactor01">기상지수</a></li>            
+            <li class="sNavi07"><a href="safety_guide.htm?method=dust">행동요령</a></li>
+                        
+          </ul>
+        </li>
+        <li id="mNavi03"><a id="mNavilink3" href="air_pollution.htm?method=average">기후대기통계</a>
+          <ul>
+            <li class="sNavi01"><a href="air_pollution.htm?method=average">대기환경</a></li>
+            <li class="sNavi02"><a href="climate.htm?method=year">기후</a></li>
+          </ul>
+        </li>
+<!--          
+        <li id="mNavi04"><a id="mNavilink4" href="inform.htm?method=cai">정보마당</a>
+          <ul>
+            <li class="sNavi01"><a href="inform.htm?method=cai">통합대기환경지수</a></li>
+            <li class="sNavi02"><a href="inform.htm?method=standards">대기환경기준</a></li>   
+            <li class="sNavi03"><a href="inform.htm?method=airPollutant">대기오염물질</a></li>
+            <li class="sNavi04"><a href="inform.htm?method=climateEffect01">기후변화</a></li>
+            <li class="sNavi05"><a href="inform.htm?method=monitoringpost">측정소정보</a></li>
+            <li class="sNavi06"><a href="inform.htm?method=monitoring">대기오염전광판</a></li>
+            <li class="sNavi07"><a href="inform.htm?method=materials">자료실</a></li>
+            <li class="sNavi08"><a href="inform.htm?method=glossary">용어사전</a></li>
+          </ul>
+        </li>
+-->
+    <li id="mNavi04"><a id="mNavilink4" href="inform.htm?method=cai">정보마당</a>
+      <ul>
+        <li class="sNavi01"><a href="inform.htm?method=cai">통합대기환경지수</a></li>
+        <li class="sNavi02"><a href="inform.htm?method=standards">대기환경기준</a></li>   
+        <li class="sNavi03"><a href="inform.htm?method=airPollutant">대기오염물질</a></li>
+        <li class="sNavi04"><a href="inform.htm?method=airQualityStandard">대기질개선정책</a></li>        
+        <li class="sNavi05"><a href="inform.htm?method=climateEffect01">기후변화</a></li>
+        <li class="sNavi06"><a href="inform.htm?method=monitoringpost">측정소정보</a></li>
+        <li class="sNavi07"><a href="inform.htm?method=monitoring">대기오염전광판</a></li>
+        <li class="sNavi08"><a href="inform.htm?method=materials">자료실</a></li>
+        <li class="sNavi09"><a href="inform.htm?method=glossary">용어사전</a></li>
+      </ul>
+    </li>
+
+        
+        <li id="mNavi05"><a id="mNavilink5" href="citizen.htm?method=notice">시민광장</a>
+          <ul>
+            <li class="sNavi01"><a href="citizen.htm?method=notice">공지사항</a></li>
+            <li class="sNavi02"><a href="citizen.htm?method=qna">묻고답하기</a></li>
+            <li class="sNavi03"><a href="citizen.htm?method=siteLink">사이트 링크</a></li>
+            <li class="sNavi04"><a href="citizen.htm?method=hpInfo">홈페이지 소개</a></li>
+            <li class="sNavi05"><a href="citizen.htm?method=way">오시는 길</a></li>
+            <li class="sNavi06"><a href="citizen.htm?method=sitemap">사이트 맵</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div style="position:relative">
+        <dl id="lang">
+          <dt><a href="#tab_grp" class="language">LANGUAGE<img src="img/bullet/blt_lang.gif" alt="1.gif" width="5" height="3"></a></dt>
+            <dd id="tab_grp">
+            	<p> 
+	                <span><a href="http://english.seoul.go.kr/policy-information/environment-energy/air-quality-information/1-air-quality-information/" target="_blank" title="go to new window">ENGLISH</a></span>
+					<span><a href="http://japanese.seoul.go.kr/%E6%94%BF%E7%AD%96%E6%83%85%E5%A0%B1/%E7%92%B0%E5%A2%83-%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC/%E5%A4%A7%E6%B0%97%E7%92%B0%E5%A2%83%E6%83%85%E5%A0%B1/1-%E5%A4%A7%E6%B0%97%E7%92%B0%E5%A2%83%E6%83%85%E5%A0%B1/" target="_blank" title="go to new window">日本語</a></span>
+	            </p>
+	            <p> 
+	                <span><a href="http://chinese.seoul.go.kr/%E6%94%BF%E7%AD%96%E4%BF%A1%E6%81%AF/%E7%8E%AF%E5%A2%83%E8%83%BD%E6%BA%90/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E4%BF%A1%E6%81%AF/1-%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E4%BF%A1%E6%81%AF/" target="_blank" title="go to new window">&#31777;&#20307;中文</a></span> 
+					<span><a href="http://tchinese.seoul.go.kr/%E6%94%BF%E7%AD%96%E8%B3%87%E8%A8%8A/%E7%92%B0%E5%A2%83%E8%83%BD%E6%BA%90/%E7%A9%BA%E6%B0%A3%E7%92%B0%E5%A2%83%E8%B3%87%E8%A8%8A/1-%E7%A9%BA%E6%B0%A3%E7%92%B0%E5%A2%83%E8%B3%87%E8%A8%8A/" target="_blank" title="go to new window">&#32321;&#20307;中文</a></span> 
+		    	</p>
+	            <p> 
+					<span><a href="http://spanish.seoul.go.kr/informacion-sobre-politicas/medio-ambiente-energia/informations-sur-la-qualite-de-lair/1-informacion-de-ambiente-atmosferico/" target="_blank" title="go to new window">Espa&ntilde;ol</a></span> 
+					<span><a href="http://french.seoul.go.kr/infos-politiques/environnement-energy/informations-sur-la-qualite-de-lair/1-informations-sur-la-qualite-de-lair/" target="_blank" title="go to new window">Fran&ccedil;ais</a></span>
+	            </p>
+			</dd>	
+        </dl>
+        <script type="text/javascript">faqList("lang");</script> 
+      </div>
+      <!-- noscript 탑네비게이션 스크립트작동안할때 출력안됨 -->
+      <noscript>
+      <ul class="noscript-menu">
+        <li class="mNavi01"><a href="air_city.htm?method=measure">기후대기환경정보</a>
+          <ul>
+            <li class="sNavi01"><a href="air_city.htm?method=measure">대기환경</a></li>
+            <li class="sNavi02"><a href="aws.htm?method=observatory">기상관측</a></li>
+            <li class="sNavi03"><a href="air_thermo.htm?method=thermo">도심열화상</a></li>
+            <li class="sNavi04"><a href="livecam.htm?method=rt">라이브 캠</a></li>
+          </ul>
+        </li>
+        <li class="mNavi02"><a href="forecast_alert.htm?method=dust">예보&middot;경보</a>
+          <ul>
+            <li class="sNavi01"><a href="forecast_alert.htm?method=dust">미세먼지</a></li>
+            <li class="sNavi02"><a href="forecast_alert.htm?method=dust2">초미세먼지</a></li>
+            <li class="sNavi03"><a href="forecast_alert.htm?method=ozone">오존</a></li>
+            <li class="sNavi04"><a href="forecast_alert.htm?method=ysand">황사</a></li>
+            <li class="sNavi05"><a href="forecast_alert.htm?method=weather">날씨</a></li>
+            <li class="sNavi06"><a href="inform.htm?method=weatherFactor01">기상지수</a></li>            
+            <li class="sNavi07"><a href="safety_guide.htm?method=dust">행동요령</a></li>
+                           
+          </ul>
+        </li>
+        <li class="mNavi03"><a href="air_pollution.htm?method=average">기후대기통계</a>
+          <ul>
+            <li class="sNavi01"><a href="air_pollution.htm?method=average">대기환경</a></li>
+            <li class="sNavi02"><a href="climate.htm?method=year">기후</a></li>
+          </ul>
+        </li>
+        <li class="mNavi04"><a href="inform.htm?method=cai">정보마당</a>
+          <ul>
+            <li class="sNavi01"><a href="inform.htm?method=cai">통합대기환경지수</a></li>
+            <li class="sNavi02"><a href="inform.htm?method=standards">대기환경기준</a></li>
+            <li class="sNavi03"><a href="inform.htm?method=airPollutant">대기오염물질</a></li>
+            <li class="sNavi04"><a href="inform.htm?method=climateEffect01">기후변화</a></li>
+            <li class="sNavi05"><a href="inform.htm?method=monitoringpost">측정소정보</a></li>
+            <li class="sNavi06"><a href="inform.htm?method=monitoring">대기오염전광판</a></li>
+            <li class="sNavi07"><a href="inform.htm?method=materials">자료실</a></li>
+            <li class="sNavi08"><a href="inform.htm?method=glossary">용어사전</a></li>
+          </ul>
+        </li>
+        <li class="mNavi05"><a href="citizen.htm?method=notice">시민광장</a>
+          <ul>
+            <li class="sNavi01"><a href="citizen.htm?method=notice">공지사항</a></li>
+            <li class="sNavi02"><a href="citizen.htm?method=qna">묻고답하기</a></li>
+            <li class="sNavi03"><a href="citizen.htm?method=siteLink">사이트 링크</a></li>
+            <li class="sNavi04"><a href="citizen.htm?method=hpInfo">홈페이지 소개</a></li>
+            <li class="sNavi05"><a href="citizen.htm?method=way">오시는 길</a></li>
+            <li class="sNavi06"><a href="citizen.htm?method=sitemap">사이트 맵</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div style="position:relative">
+        <dl id="lang">
+          <dt><a href="#tab_grp" class="language">LANGUAGE<img src="img/bullet/blt_lang.gif" alt="1.gif" width="5" height="3"></a></dt>
+          <dd id="tab_grp">
+            <p> 
+            	<!-- <span><a href="http://www.seoul.go.kr" target="_blank" title="go to new window">KOREAN</a></span> --> 
+            	<span><a href="http://english.seoul.go.kr/policy-information/environment-energy/air-quality-information/1-air-quality-information/" target="_blank" title="go to new window">ENGLISH</a></span>
+            	<span><a href="http://japanese.seoul.go.kr/%E6%94%BF%E7%AD%96%E6%83%85%E5%A0%B1/%E7%92%B0%E5%A2%83-%E3%82%A8%E3%83%8D%E3%83%AB%E3%82%AE%E3%83%BC/%E5%A4%A7%E6%B0%97%E7%92%B0%E5%A2%83%E6%83%85%E5%A0%B1/1-%E5%A4%A7%E6%B0%97%E7%92%B0%E5%A2%83%E6%83%85%E5%A0%B1/" target="_blank" title="go to new window">日本語</a></span>
+            </p>
+            <p> 
+            	<span><a href="http://chinese.seoul.go.kr/%E6%94%BF%E7%AD%96%E4%BF%A1%E6%81%AF/%E7%8E%AF%E5%A2%83%E8%83%BD%E6%BA%90/%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E4%BF%A1%E6%81%AF/1-%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E4%BF%A1%E6%81%AF/" target="_blank" title="go to new window">&#31777;&#20307;中文</a></span> 
+            	<span><a href="http://tchinese.seoul.go.kr/%E6%94%BF%E7%AD%96%E8%B3%87%E8%A8%8A/%E7%92%B0%E5%A2%83%E8%83%BD%E6%BA%90/%E7%A9%BA%E6%B0%A3%E7%92%B0%E5%A2%83%E8%B3%87%E8%A8%8A/1-%E7%A9%BA%E6%B0%A3%E7%92%B0%E5%A2%83%E8%B3%87%E8%A8%8A/" target="_blank" title="go to new window">&#32321;&#20307;中文</a></span> 
+			</p>
+            <!-- <p> <span><a href="http://spanish.seoul.go.kr" target="_blank" title="go to new window">espa&ntilde;ol</a></span> <span><a href="http://french.seoul.go.kr" target="_blank" title="go to new window">fran&ccedil;ais</a></span></p> -->
+          </dd>
+        </dl>
+        <script type="text/javascript">faqList("lang");</script> 
+      </div>
+      </noscript>
+      <script type="text/javascript">
+	$(function(){
+		$("#mNavilink1").css({display:'block'});
+		$("#mNavilink2").css({display:'block'});
+		$("#mNavilink3").css({display:'block'});
+		$("#mNavilink4").css({display:'block'});
+		$("#mNavilink5").css({display:'block'});
+		//$("#mNavilink6").css({display:'block'});
+		//$("#mNavilink7").css({display:'block'});
+		})
+	</script> 
+      <!-- 탑네비게이션// --> 
+    </div>
+  </div>
+	<!-- header -->
+
+  <div id="container">
+    <div id="subwrap"> 
+      <!-- lnb -->
+      
+      <div id="sidebar">
+        <h2>기후대기현황</h2>
+        <ul id="lnb">
+          <li><a href="air_city.htm?method=measure">대기환경 </a> 
+            <!-- a태그사이, 텍스트뒤에 공백 지우지마세요 ie6버그 -->
+            <ul>
+              <li><a href="air_city.htm?method=measure">도시대기 </a></li>
+              <li><a href="air_road.htm?method=measure">도로변 </a></li>
+              <li><a href="air_pollutant.htm?method=watch">대기오염시계 </a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="aws.htm?method=observatory">기상관측 </a>
+            <ul>
+              <li><a href="aws.htm?method=observatory">관측소별 </a></li>
+              <li><a href="aws.htm?method=month">일별 </a></li>
+              <li><a href="aws.htm?method=element">요소별 </a></li>
+            </ul>
+          </li> -->
+          <!-- <li><a href="air_thermo.htm?method=thermo">도심열화상 </a></li> -->
+          <li><a href="livecam.htm?method=rt">라이브캠 </a></li>
+        </ul>
+      </div>
+      <!-- lnb// -->
+      <hr />
+      <!-- contents -->
+      <div id="contents"> 
+        <!-- 페이지경로 -->
+        <p id="path"><a href="main.htm"><img src="img/bullet/home_11x10.gif" width="11" height="11" alt="home" title="home" /></a>&nbsp;&gt;&nbsp;기후대기현황&nbsp;&gt;&nbsp;대기환경&nbsp;&gt;&nbsp;도시대기&nbsp;&gt;&nbsp;<span>측정소별</span></p>
+        <!-- 페이지경로// --> 
+        <!-- 글씨크게작게 -->
+        <p class="txtTrans"> <span class="resize"><img src="img/btn/large.gif" width="18" height="18" alt="글씨크게" title="글씨크게" onclick="set_fontsize(+1)" /><img src="img/btn/normal.gif" width="18" height="18" alt="글씨초기화" title="글씨초기화" onclick="set_fontsize(0)" /><img src="img/btn/small.gif" width="18" height="18" alt="글씨작게" title="글씨작게" onclick="set_fontsize(-1)" /></span><span class="print"><img src="img/btn/print.gif" width="53" height="24" alt="인쇄" title="인쇄" onclick="pagePrintAll()" /></span></p>
+        <!-- 글씨크게작게// -->
+        <h2><img src="img/title/h2_city.gif" width="122" height="33" alt="도시대기" /></h2>
+        <!-- 탭메뉴 -->
+        <div id="subtab">
+          <ul class="city">
+            <li class="col1">측정소별</li>
+            <li class="col2"><a href="air_city.htm?method=rigion">권역별</a></li>
+            <li class="col3"><a href="air_city.htm?method=pollutant">오염물질별</a></li>
+			<li class="col4"><a href="air_city.htm?method=period">기간별</a></li>			
+          </ul>
+        </div >
+        <!-- 탭메뉴 //-->
+        <h3><img src="img/title/title_situation.gif" width="174" height="22" alt="실시간 대기환경정보" /></h3>
+        <div class="map">
+          <div class="mapimg"> 
+            <!-- 플래시 지도 --> 
+            <script type="text/javascript">
+			var flash = new SWFLoader;
+			flash.setting({
+				url:"img/swf/map1_tot.swf", id:"mainvisual", width:470, height:350, wmode:'window', alternate:"측정소 위치 지도 이미지"
+				,flashvars:"?msrntwCode=A"
+			});
+			flash.show();
+              </script> 
+            <!-- 플래시 지도 //--> 
+          </div>
+          <div class="mapdata">
+            <p class="day"><em class="ft_point1 ft_u">2016년 05월 20일 17시</em> 기준</p>
+            <!-- p>※ 대기오염도 자료는 최종인증을 받기 <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;전의 <em class="ft_b">실시간 자료</em> 입니다. </p-->
+            <!-- 범례테이블 -->
+            <h5 class="notetit"><a href="inform.htm?method=cai">통합대기환경지수</a></h5>
+            <div class="note">
+              <table width="100%" cellspacing="0" cellpadding="0" summary="통합대기환경지수 범례와 지수범위를 알려줍니다.">
+                <caption>
+                통합대기환경지수 범례
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="row">범례</th>
+                    <td>지수범위</td>
+                  </tr>
+                </thead>
+                <tbody>  
+                  <tr>
+                    <th scope="row"><img src="img/s_situation/note_num1.gif" width="15" height="14" alt="좋음 이미지" />좋음</th>
+                    <td>(0~50)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="img/s_situation/note_num2.gif" width="15" height="14" alt="보통 이미지" />보통</th>
+                    <td>(51~100)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="img/s_situation/note_num3.gif" width="15" height="14" alt="나쁨 이미지" />나쁨</th>
+                    <td>(101~250)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><img src="img/s_situation/note_num4.gif" width="15" height="14" alt="매우나쁨 이미지" />매우나쁨</th>
+                    <td>(251~)</td>
+                  </tr><!-- 
+                  <tr>
+                    <th scope="row"><img src="img/s_situation/note_num6.gif" width="15" height="14" alt="위험 이미지" />위험</th>
+                    <td>(351~500)</td>
+                  </tr> -->
+                  <tr>
+                    <th scope="row"><img src="img/s_situation/note_num0.gif" width="15" height="14" alt="점검중 이미지" />점검중</th>
+                    <td class="botr">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- 범례테이블// --> 
+          </div>
+        </div>         
+        <!-- 테이터테이블 -->
+        <h4 class="graph_h4 mgb10"> [표] 실시간 도시대기측정소 대기오염정보 : <span class="ft_point1">2016년 05월 20일 17시</span></h4>
+        <table class="tbl2" summary="실시간 도시대기측정소의 미세먼지, 오존, 이산화질소, 일산화탄소, 아황산가스의 농도와 통합대기환경지수를 출력합니다.">
+          <caption>
+          [표] 실시간 도시대기측정소 대기오염정보
+          </caption>
+          <colgroup>
+          <col width="7%" />
+          <col width="10%" />  
+                 
+          <col width="10%" />
+          <col width="10%" />
+          <col width="9%" />
+          <col width="10%" />
+          <col width="10%" />
+          <col width="10%" />
+          
+          <col width="10%" />
+          <col width="6%" />
+          <col width="8%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th rowspan="2" scope="col" class="bdrbot l">구분</th>
+              <th rowspan="2" scope="col" class="bdrbot">측정소명</th>              
+              <th  scope="col">미세먼지<br />
+                <span class="other nobr">PM-10(&micro;g/m&sup3;)</span></th>
+              <th  scope="col">초미세먼지<br />
+                <span class="other nobr">PM-2.5(&micro;g/m&sup3;)</span></th>
+              <th scope="col">오존<br />
+                <span class="other">O<sub>3</sub>(ppm)</span></th>
+              <th scope="col">이산화질소<br />
+                <span class="other">NO<sub>2</sub>(ppm)</span></th>
+              <th scope="col">일산화탄소<br />
+                <span class="other">CO(ppm)</span></th>
+              <th scope="col">아황산가스<br />
+                <span class="other">SO<sub>2</sub>(ppm)</span></th>
+              <th colspan="3" scope="col" class="r">통합대기환경지수</th>  
+            </tr>
+            <tr class="ft_b">
+              <td >1시간</td>
+              
+              <td>1시간</td>
+              <td>1시간</td>
+              <td>1시간</td>
+              <td>1시간</td>
+              <td>1시간</td>
+              <td>등급</td>
+              <td>지수</td>
+              <td class="r">결정물질</td> 
+            </tr>
+          </thead>
+          <tbody>
+
+	
+			
+			
+			
+			
+			
+					
+            <tr class="ft_b ft_point8">
+              <th scope="row">도시대기    </th>
+              <td style="text-align:left;text-indent:5px;">서울시평균     </td>
+              <td class="num_color_2">31</td>
+              <td class="num_color_2">16</td> 
+              <td class="num_color_2">0.087</td>
+              <td class="num_color_1">0.030</td>
+              <td class="num_color_1">0.4</td>
+              <td class="num_color_1">0.005</td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              <!-- point는 회색bg -->
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              98</td>
+              <td class="point">
+              	
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			    
+              </td> 
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	종로구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        15
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        10
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.062
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.029
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.3
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.005
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	77			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	중구              	
+              </td>               
+              <td class="num_color_2">
+              	
+			        
+			        34
+			    
+              </td>
+              
+              <td class="num_color_2">
+              	
+			        
+			        19
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.074
+			    
+              </td>
+              <td class="num_color_2">
+              	
+			        
+			        0.047
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.5
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.004
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	87			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	용산구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        27
+			    
+              </td>
+              
+              <td class="num_color_2">
+              	
+			        
+			        18
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.077
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.022
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.3
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.004
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	90			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	성동구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        19
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        11
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.072
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.022
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.1
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.006
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	86			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	광진구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        21
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        11
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.060
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.018
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.4
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.004
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	76			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	동대문구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        26
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        14
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.067
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.020
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.2
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.006
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	81			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	중랑구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        24
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        14
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.068
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.026
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.2
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.005
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	82			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	성북구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        22
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        9
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.057
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.027
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.3
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.003
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	73			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	강북구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        17
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        12
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.087
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.014
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.3
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.003
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	98			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	도봉구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        25
+			    
+              </td>
+              
+              <td class="num_color_2">
+              	
+			        
+			        20
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.085
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.015
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.2
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.003
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	96			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	노원구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        19
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        12
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.076
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.017
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.3
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.004
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	89			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	은평구              	
+              </td>               
+              <td class="num_color_2">
+              	
+			        
+			        66
+			    
+              </td>
+              
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+             
+              <td class="num_color_3">
+              	
+			        
+			        0.117
+			    
+              </td>
+              <td class="num_color_2">
+              	
+			        
+			        0.051
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.4
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.009
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	서대문구              	
+              </td>               
+              <td class="num_color_2">
+              	
+			        
+			        69
+			    
+              </td>
+              
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+             
+              <td class="num_color_3">
+              	
+			        
+			        0.114
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.021
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.4
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.007
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	마포구              	
+              </td>               
+              <td class="num_color_2">
+              	
+			        
+			        69
+			    
+              </td>
+              
+              <td class="num_color_2">
+              	
+			        
+			        45
+			    
+              </td>
+             
+              <td class="num_color_3">
+              	
+			        
+			        0.105
+			    
+              </td>
+              <td class="num_color_2">
+              	
+			        
+			        0.039
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.5
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.006
+			                  
+              </td>
+              
+              
+              
+        	  <td class="num_color_3">
+        	  
+        	  
+              나쁨</td>
+              
+              
+			        
+			        
+			        	
+			        	<td class="num_color_3">
+			        	
+			        	
+			        	137			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	양천구              	
+              </td>               
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+              
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+             
+              <td class="num_color_3">
+              	
+			        
+			        0.138
+			    
+              </td>
+              <td class="num_color_2">
+              	
+			        
+			        0.045
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.6
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.009
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	강서구              	
+              </td>               
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+              
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+             
+              <td class="num_color_3">
+              	
+			        
+			        0.105
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.029
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.4
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.006
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	구로구              	
+              </td>               
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+              
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+             
+              <td class="num_color_3">
+              	
+			        
+			        0.101
+			    
+              </td>
+              <td class="num_color_2">
+              	
+			        
+			        0.034
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.7
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.009
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	금천구              	
+              </td>               
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+              
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+             
+              <td class="num_color_3">
+              	
+			        
+			        0.118
+			    
+              </td>
+              <td class="num_color_2">
+              	
+			        
+			        0.057
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.5
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.007
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	영등포구              	
+              </td>               
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+              
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+             
+              <td class="num_color_3">
+              	
+			        
+			        0.104
+			    
+              </td>
+              <td class="num_color_2">
+              	
+			        
+			        0.038
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.6
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.006
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	동작구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        29
+			    
+              </td>
+              
+              <td class="num_color_2">
+              	
+			        
+			        19
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.083
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.029
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.4
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.005
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	95			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	관악구              	
+              </td>               
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+              
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+             
+              <td class="num_color_3">
+              	
+			        
+			        0.126
+			    
+              </td>
+              <td class="num_color_2">
+              	
+			        
+			        0.044
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.6
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.007
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	서초구              	
+              </td>               
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+              
+              <td class="num_color_2">
+              	
+			        
+			        23
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.069
+			    
+              </td>
+              <td class="num_color_2">
+              	
+			        
+			        0.042
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.3
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.003
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	강남구              	
+              </td>               
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+              
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+             
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			    
+              </td>
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			      
+              </td>
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			      
+              </td>
+              <td class="num_color_0">
+              	
+			        점검중
+			        
+			                  
+              </td>
+              
+              <td class="num_color_0">
+              
+        	  
+        	  
+        	  
+              -</td>
+              
+              
+			        <td class="point">-
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        -
+			        
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	송파구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        17
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        10
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.073
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.012
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.3
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.004
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	86			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		
+			
+					
+			
+			
+			
+						
+            <tr>
+              <th scope="row">도시대기</th>
+              <td style="text-align:left;text-indent:5px;">
+              	강동구              	
+              </td>               
+              <td class="num_color_1">
+              	
+			        
+			        24
+			    
+              </td>
+              
+              <td class="num_color_1">
+              	
+			        
+			        10
+			    
+              </td>
+             
+              <td class="num_color_2">
+              	
+			        
+			        0.051
+			    
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.021
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.3
+			      
+              </td>
+              <td class="num_color_1">
+              	
+			        
+			        0.003
+			                  
+              </td>
+              
+              
+              
+        	  
+        	  <td class="num_color_2">
+        	  
+              보통</td>
+              
+              
+			        
+			        
+			        	
+			        	
+			        	<td class="num_color_2">
+			        	
+			        	68			        	
+			        
+			    
+              </td>
+              <td class="point">
+               
+			        
+			        O<sub>3</sub>
+			        
+			        
+			        
+			        
+			    
+              </td>
+            </tr>	
+		  	
+	
+	
+            
+          </tbody>
+        </table>
+        <!-- 테이터테이블// -->
+        <!-- 참고 -->
+        <div class="bxtype1">
+          <dl>
+            <dt class="ft_point8">참고사항</dt>
+            <dd class="ft_point5">통합대기환경지수는 과거 12시간 동안의 (초)미세먼지 농도에 영향을 받을 수 있으므로 현재의 대기질 상태와 다를 수 있음</dd>
+            <dd>통신장애, 장비점검 등의 원인으로 측정소별 자료가 모두 수집되지 않으면 통합대기 환경지수는 산출되지 않으며 통합대기
+			<br /><b>&nbsp;&nbsp;</b>환경지수란은 "-"로 표기됩니다.</dd>
+			<dd>대기오염도 자료는 최종인증을 받기 전의 <em class="ft_b">실시간 자료</em> 입니다. </dd>
+            <dd >1시간 : 1시간 농도값 </dd>
+            <dd >초미세먼지(PM-2.5)는 자동측정(&#946;선-흡수법)자료임</dd>                        
+            <!-- <dd class="ft_point5">미세먼지, 초미세먼지  대기지수 산출방법이 24시간 예측이동 평균으로 산출되므로 통합대기환경지수는 측정값과 기준이 다를 수 있음</dd> -->
+		  </dl>
+        </div>
+        <!-- 참고// -->
+        <!-- 퀵메뉴 -->
+        
+        <div id="quick"> 
+          <script type="text/javascript">
+				var quick = new quicks("quick");
+				quick.int();
+				// quick.limitBottom(230);
+				quick.move();
+			</script>
+          <h3>바로가기</h3>
+          <ul>
+            <!-- a태그사이, 텍스트뒤에 공백 지우지마세요 ie6버그 -->
+            <li><a href="safety_guide.htm?method=dust"><img src="img/layout/title_quick1.gif" width="51" height="30" alt="시민행동요령 바로가기" /> </a></li>
+            <li><a href="inform.htm?method=standards"><img src="img/layout/title_quick2.gif" width="51" height="30" alt="대기환경기준 바로가기" /> </a></li>
+            <li><a href="citizen.htm?method=siteLink"><img src="img/layout/title_quick3.gif" width="51" height="30" alt="관련사이트 바로가기" /> </a></li>
+            <li><a href="inform.htm?method=cai"><img src="img/layout/title_quick4.gif" width="51" height="38" alt="통합대기환경지수 바로가기" /> </a></li>
+          </ul>
+        </div>
+        <!-- 퀵메뉴 //--> 
+      </div>
+      <!-- contents // --> 
+    </div>
+  </div>
+  <!-- footer -->
+  
+  <!--footer// --> 
+</div>
+</body>
+</html>
