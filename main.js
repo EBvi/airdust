@@ -13,15 +13,13 @@ var updated = html.match(/<span class=\"ft_point1\">(.*?)<\/span>/)[1],
     .split(/ class=\".*?\"/).join('')
     .split(/ style=\".*?\"/).join('');
 
-var arr = [];
+var items = [];
 tbody.match(/<tr>(.*?)<\/tr>/g).map(function(tr){
-    arr.push( tr.match(/<td ?>(.*?)<\/td>/g).map(function(n){
+    var v = tr.match(/<td ?>(.*?)<\/td>/g).map(function(n){
         return n.split(/<\/?\w*>/).join('').trim();
-    }) );
+    });
+    items.push({
+        title: `${v[0]} :: 미세먼지(${v[1]}), 초미세먼지(${v[2]}) - ${v[7]}`,
+        subtitle: `${updated} 기준`
+    });
 });
-
-var r = '<items>';
-arr.map(function(v){
-    r += `<item><title>${v[0]} :: 미세먼지(${v[1]}), 초미세먼지(${v[2]}) - ${v[7]}</title><subtitle>${updated} 기준</subtitle></item>`;
-});
-r += '</items>';
