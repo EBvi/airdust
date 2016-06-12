@@ -5,7 +5,7 @@ var source = app.doShellScript('curl http://cleanair.seoul.go.kr/air_city.htm?me
 // var source = app.doShellScript('cat ~/Desktop/test.txt'), // TEST
     html = ( source.match(/<!-- 테이터테이블 -->[\W\w]*<!-- 테이터테이블\/\/ -->/)[0]||'' )
     .split(/<!--.*?-->/).join('')
-    .split(/[\r\t]/).join('')
+    .replace(/\t/g, '').replace(/\n/g, '').replace(/\r/g, '')
     .split('    ').join('');
 
 var updated = html.match(/<span class=\"ft_point1\">(.*?)<\/span>/)[1],
