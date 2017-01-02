@@ -3,14 +3,16 @@ app.includeStandardAdditions = true;
 
 var source = app.doShellScript('curl http://cleanair.seoul.go.kr/air_city.htm?method=measure'),
 // var source = app.doShellScript('cat ~/Desktop/test.txt'), // TEST
-    html = ( source.match(/<!-- 테이터테이블 -->[\W\w]*<!-- 테이터테이블\/\/ -->/)[0]||'' )
+    html = ( source.match(/<!-- 테이터테이블 -->[\W\w]*<!-- 페이지넘버 -->/)[0]||'' )
     .split(/<!--.*?-->/).join('')
     .replace(/\t/g, '').replace(/\n/g, '').replace(/\r/g, '')
     .split('    ').join('');
 
-var updated = html.match(/<span class=\"ft_point1\">(.*?)<\/span>/)[1],
+var updated = html.match(/<h4 class=\"mgb10 mgt20\">.*:(.*?)<\/h4>/)[1],
     tbody = (html.match(/<tbody>.*<\/tbody>/)[0]||'')
     .split(/ class=\".*?\"/).join('')
+    .split(/ scope=\".*?\"/).join('')
+    .split("&nbsp;").join(' ')
     .split(/ style=\".*?\"/).join('');
 
 var items = [];
