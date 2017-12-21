@@ -3,7 +3,7 @@ app.includeStandardAdditions = true;
 
 var source = app.doShellScript('curl http://cleanair.seoul.go.kr/air_city.htm?method=measure'),
 // var source = app.doShellScript('cat ~/Desktop/test.txt'), // TEST
-    html = ( source.match(/<!-- 테이터테이블 -->[\W\w]*<!-- 페이지넘버 -->/)[0]||'' )
+    html = ( source.match(/<div class="sch2 mgb10">[\W\w]*<\/table>/)[0]||'' )
     .split(/<!--.*?-->/).join('')
     .replace(/\t/g, '').replace(/\n/g, '').replace(/\r/g, '')
     .split('    ').join('');
